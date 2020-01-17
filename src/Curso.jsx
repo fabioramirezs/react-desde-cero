@@ -1,72 +1,31 @@
 import React from 'react'
 
-const Curso = () => (
+const curso = {
+"profesor": "Beto Quiroga",
+"imageProfesor": "https://api.ed.team/files/avatars/38118146-4b4a-4844-8959-157614e04cd1.jpg"
+}
+
+const Curso = props => (
 <><article className="card">
   <div className="img-container s-ratio-16-9 s-radius-tr s-radius-tl">
-    <img src="https://drupal.ed.team/sites/default/files/styles/medium/public/courses/images/go_0.jpg?itok=k2amLhrN" alt=""/>
+    <img src={props.image} alt={props.title}/>
   </div>
   <div className="card__data s-border s-radius-br s-radius-bl s-pxy-2">
     <h3 className="t5 s-mb-2 s-center">
-      Programación orientada a objetos con Go
+     {curso.title}
     </h3>
     <div className="s-mb-2 s-main-center">
       <div className="card__teacher s-cross-center">
         <div className="card__avatar s-mr-1">
           <div className="circle img-container">
-            <img src="https://api.ed.team/files/avatars/747dea4d-4438-4a7e-904a-427a5cd6aac7.jpg" alt=""/>
+            <img src={curso.imageProfesor} alt={curso.profesor}/>
           </div>
         </div>
-        <span className="small">Alexys Lozada</span>
+        <span className="small">{curso.profesor}</span>
       </div>
     </div>
     <div className="s-main-center">
-      <a className="button--ghost-alert button--tiny" href="www.google.com.co">$ 20USD</a>
-    </div>
-  </div>
-</article>
-<article className="card">
-  <div className="img-container s-ratio-16-9 s-radius-tr s-radius-tl">
-    <img src="https://drupal.ed.team/sites/default/files/styles/medium/public/courses/images/go_0.jpg?itok=k2amLhrN" alt=""/>
-  </div>
-  <div className="card__data s-border s-radius-br s-radius-bl s-pxy-2">
-    <h3 className="t5 s-mb-2 s-center">
-      Programación orientada a objetos con Go
-    </h3>
-    <div className="s-mb-2 s-main-center">
-      <div className="card__teacher s-cross-center">
-        <div className="card__avatar s-mr-1">
-          <div className="circle img-container">
-            <img src="https://api.ed.team/files/avatars/747dea4d-4438-4a7e-904a-427a5cd6aac7.jpg" alt=""/>
-          </div>
-        </div>
-        <span className="small">Alexys Lozada</span>
-      </div>
-    </div>
-    <div className="s-main-center">
-      <a className="button--ghost-alert button--tiny" href="www.google.com.co">$ 20USD</a>
-    </div>
-  </div>
-</article>
-<article className="card">
-  <div className="img-container s-ratio-16-9 s-radius-tr s-radius-tl">
-    <img src="https://drupal.ed.team/sites/default/files/styles/medium/public/courses/images/go_0.jpg?itok=k2amLhrN" alt=""/>
-  </div>
-  <div className="card__data s-border s-radius-br s-radius-bl s-pxy-2">
-    <h3 className="t5 s-mb-2 s-center">
-      Programación orientada a objetos con Go
-    </h3>
-    <div className="s-mb-2 s-main-center">
-      <div className="card__teacher s-cross-center">
-        <div className="card__avatar s-mr-1">
-          <div className="circle img-container">
-            <img src="https://api.ed.team/files/avatars/747dea4d-4438-4a7e-904a-427a5cd6aac7.jpg" alt=""/>
-          </div>
-        </div>
-        <span className="small">Alexys Lozada</span>
-      </div>
-    </div>
-    <div className="s-main-center">
-      <a className="button--ghost-alert button--tiny" href="www.google.com.co">$ 20USD</a>
+<a className="button--ghost-alert button--tiny" href="www.google.com.co">{`$ ${props.price}`} </a>
     </div>
   </div>
 </article>
