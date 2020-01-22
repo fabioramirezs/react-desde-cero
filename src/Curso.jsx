@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Curso = ({title, image,price, profesor, imageProfesor}) => (
+const Curso = ({id,title, image,price, profesor, imageProfesor}) => (
 <article className="card">
   <div className="img-container s-ratio-16-9 s-radius-tr s-radius-tl">
     <img src={image} alt={title}/>
@@ -28,6 +28,7 @@ const Curso = ({title, image,price, profesor, imageProfesor}) => (
 )
 
 Curso.propTypes = {
+    id: PropTypes.number,
     title: PropTypes.string,
     image: PropTypes.string,
     price: PropTypes.number,
@@ -36,6 +37,7 @@ Curso.propTypes = {
 }
 
 Curso.defaultProps = {
+    id: -1,
     title: "No hay titulo",
     image: "https://onlinezebra.com/wp-content/uploads/2019/01/error-404-not-found.jpg",
     price: "--",
