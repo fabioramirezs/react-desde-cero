@@ -20,11 +20,22 @@ class Formulario extends React.Component{
                 <div className="ed-grid m-grid-2">
                 <div className="form__item">
                                     <label>Nombre Completo</label>
-                                    <input type="text"></input>
+                                    <input type="text" 
+                                    onChange={e => {
+                                      this.setState({
+                                          nombre: e.target.value
+                                      })}
+                                    }/>
                                 </div>       
                                 <div className="form__item">
                                     <label>Correo Electronico</label>
-                                    <input type="email"></input>
+                                    <input type="email" onChange={
+                                        e => {
+                                            this.setState({
+                                                correo: e.target.value
+                                            })
+                                        }
+                                    }/>
                                 </div> 
                                 {/* <div className="form__item">
                                     <input type="submit" value="Enviar" className="button full"></input>
