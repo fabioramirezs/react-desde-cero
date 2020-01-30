@@ -45,7 +45,7 @@ class Formulario extends React.Component{
 
     render(){
         return (
-            <div className="ed-grid"><h1>Formulario</h1>
+        <div className="ed-grid"><h1>Formulario {this.props.name}</h1>
             <h4>Fecha actual: {Math.ceil(this.state.fecha/1000)}</h4>
             <form id="formulario">
                 <div className="ed-grid m-grid-2">
